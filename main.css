@@ -1,0 +1,101 @@
+body {
+    /* Setup some global defaults */
+    background-color: #555;
+    color: antiquewhite;
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+
+    /* While it seems these properties would collide,
+       later statements simply override earlier ones. */
+    padding: 0;
+    padding-top: 50px;
+}
+
+.nav {
+    height: 50px;
+    background: #888;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 25px;
+
+    /* Lock the navbar at the top */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+a {
+    /* Note here that the class above also sets a colour for <a> elements,
+      however this will not affect those, as the selector is more specific. */
+    color: #c24323;
+}
+
+.nav .top-link {
+    margin-right: auto;
+    font-size: 30px;
+    letter-spacing: 2px;
+    color: #c24323;
+    font-weight: 900;
+}
+
+.section {
+    min-height: 20em;
+    padding: 30px 10vw;
+}
+
+.flex-split {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.falcon-bg {
+    background: rgba(0, 0, 0, 0.6) url("img/han_chewie.jpg");
+    background-size: cover;
+}
+
+.portfolio-boxes {
+    /* Here we use grid, a slightly more advanced version of flex that more closely resembles a table. It is however very flexible! */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 40px;
+}
+
+.portfolio-box {
+    background: #888;
+    color: #222;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.portfolio-box h3 {
+    color: #c24323;
+    /* There are some very interesting things you can do with `filter`. */
+    filter: brightness(0.7) saturate(1.5);
+}
+
+.portfolio-box img {
+    max-width: 250px;
+    max-height: 150px;
+    border-radius: 20px;
+}
+
+.form-control {
+    display: block;
+    margin: 3px 0 10px 0;
+    padding: 2px 10px;
+    background-color: #222;
+    border: none;
+    font-size: large;
+    color: white;
+}
